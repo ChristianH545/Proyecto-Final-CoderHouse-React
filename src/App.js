@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import ItemListContainer from "./components/container/ItemListContainer";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <>
         <NavBar></NavBar>
+        <ItemListContainer></ItemListContainer>
       </>
     </div>
   );
