@@ -3,7 +3,7 @@ import React from "react";
 const NavBar = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">NavBar</h1>
+      <h1>soy el NavBar</h1>
     </>
   );
 };
