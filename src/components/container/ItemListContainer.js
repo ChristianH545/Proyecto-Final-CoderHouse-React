@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
   return (
     <>
       <ItemStyle>
         <div>
-          <h2> Hola Coder House! </h2>
+          <h2> {props.greeting}</h2>
         </div>
       </ItemStyle>
     </>
