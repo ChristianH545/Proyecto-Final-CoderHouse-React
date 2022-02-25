@@ -29,7 +29,7 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <StyleItemListContainer className="products-container">
+    <StyleItemListContainer>
       {products.length ? (
         products.map((product) => {
           return (
@@ -47,13 +47,13 @@ const ItemListContainer = () => {
 
 export default ItemListContainer;
 
+//!Estilos para ProductCard
+
 const StyleItemListContainer = styled.section`
-  .products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1024px;
-    margin: 60px auto;
-    gap: 30px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1024px;
+  margin: 60px auto;
+  gap: 30px;
 `;

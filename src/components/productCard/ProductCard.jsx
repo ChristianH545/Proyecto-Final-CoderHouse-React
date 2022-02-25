@@ -3,7 +3,7 @@ import styled from "styled-components"; // importo la dependencia de mi package.
 
 const ProductCard = ({ product }) => {
   return (
-    <StyleProductCard className="product-card">
+    <StyleProductCard>
       <div className="product-card__img">
         <img src={product.img} alt="" />
       </div>
@@ -15,7 +15,9 @@ const ProductCard = ({ product }) => {
         <span>
           {product.signo} {product.price} {product.divisa}
         </span>
-        <button className="btn-compra">Comprar</button>
+        <div>
+          <button className="btn-compra">Comprar</button>
+        </div>
       </div>
     </StyleProductCard>
   );
@@ -26,32 +28,31 @@ export default ProductCard;
 //!Estilos para ProductCard
 
 const StyleProductCard = styled.article`
-  .product-card {
-    width: 320px;
-    height: 420px;
+  width: 320px;
+  height: 620px;
 
-    &__img {
+  &__img {
+    width: 100%;
+    height: 500px;
+
+    img {
       width: 100%;
-      height: 500px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    &__detail {
-      text-align: center;
-      h2 {
-        font-size: 1.4rem;
-        text-transform: capitalize;
-        padding: 10px 0;
-      }
-      span {
-      }
+      height: 100%;
+      object-fit: cover;
     }
   }
+
+  &__detail {
+    text-align: center;
+    h2 {
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      padding: 10px 0;
+    }
+    span {
+    }
+  }
+
   .btn-compra {
     color: white;
     background-color: rgb(41, 103, 204);
