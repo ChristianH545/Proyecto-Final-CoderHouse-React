@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import BurguerButton from "./BurguerButton";
-import imagenes from "../assets/imagenes";
+import React, { useState } from "react"; //importando el estado "useState" (referencia al ciclo de vida)
+import styled from "styled-components"; // importo la dependencia de mi package.Json "styled-components" para manejar los style
+import BurguerButton from "../NavBar/BurguerButton"; //importo el efecto de mi menu
+import imagenes from "../../assets/imagenes/Imagenes"; //importo mis imagenes desde la carpeta assets hasta dicha carpeta (Imagenes)
+import { AiOutlineHome } from "react-icons/ai"; // importamos los icons
 
 const NavBar = () => {
   const [clicked, setClicked] = useState(false);
-
   const handleClick = () => {
     //cuando esta true lo pasa a false y vice versa
     setClicked(!clicked);
@@ -19,9 +19,11 @@ const NavBar = () => {
         </h1>
         <div className={`links ${clicked ? "active" : ""}`}>
           <a onClick={handleClick} href="#h">
+            <AiOutlineHome className="IconHome" />
             Home
           </a>
           <a onClick={handleClick} href="#h">
+            <AiOutlineHome className="IconHome" />
             Shop
           </a>
           <a onClick={handleClick} href="#h">
@@ -60,6 +62,7 @@ const StyleNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   a {
     font-size: 1.5rem;
     color: white;
@@ -70,6 +73,7 @@ const StyleNav = styled.nav`
     color: orange;
     background: white;
   }
+
   img {
     position: absolute;
     width: 100px;
@@ -85,10 +89,12 @@ const StyleNav = styled.nav`
     text-align: center;
     transition: all 0.5s ease;
     a {
+      margin-inline-end: 1em;
       color: white;
       font-size: 2rem;
       display: block;
     }
+
     @media (min-width: 768px) {
       position: initial;
       margin: 0;
@@ -96,11 +102,18 @@ const StyleNav = styled.nav`
         font-size: 1.5rem;
         color: white;
         display: inline;
+        border: 2px solid black;
       }
       a:hover {
         color: orange;
         background: white;
       }
+      .IconHome {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+      }
+
       display: block;
     }
   }

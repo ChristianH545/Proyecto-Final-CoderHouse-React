@@ -1,15 +1,18 @@
-// import logo from "./logo.svg";
+import NavBar from "./layout/NavBar/NavBar";
+import HeroContainer from "./components/HeroContainer/HeroContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+//  import itemlistcontainer from "../src/ItemListContainer";
 import "./App.css";
-import ItemListContainer from "./components/container/ItemListContainer";
-import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div className="App">
       <>
         <NavBar></NavBar>
+        <HeroContainer />
+        <ItemListContainer />
 
-        <ItemListContainer greeting="Bienvenido a mi Tienda " />
+        {/* <itemlistcontainer greeting="Bienvenido a mi Tienda " /> */}
       </>
     </div>
   );

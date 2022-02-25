@@ -1,0 +1,110 @@
+[
+  {
+     "id": 1,
+     "maker": "Porsche",
+     "model": "911 Turbo S",
+     "year": 2021,
+     "price": 362400,
+     "divisa": "USD",
+     "signo": "$",
+     "description": " El 911 Turbo el motor ofrece 580 CV (427 kW), en el 911 Turbo S hasta 650 CV (478 kW). Resultan excepcionales las aceleraciones. El 911 Turbo alcanza en 2,8 segundos los 100 km/h con Launch Control activado, y en 9,7 los 200 km/h. El 911 Turbo S alcanza en 2,7 segundos los 100 km/h con Launch Control activado, y en 8,9 los 200 km/h. Velocidad máxima: 320 km/h en el 911 Turbo y 330 km/h en el 911 Turbo S.",
+     "img": "https://static.turbosquid.com/Preview/2020/03/09__02_20_09/Porsche_911_Turbo_S_2021_0000.jpgC5879E43-F966-4E67-9A05-1781B0B59F65Large.jpg",
+     "stock": 10
+  },
+  {
+     "id": 2,
+     "maker": "Porsche",
+     "model": "Cayenne Turbo GT",
+     "year": 2021,
+     "price": 544000,
+     "divisa": "USD",
+     "signo": "$",
+     "description": " El motor biturbo V8 de 4.0 litros lo demuestra: una voluntad incondicional de ganar requiere fuerza en estado puro.Cuando se trata de rendimiento puro, el Cayenne Turbo GT alcanza un nivel completamente nuevo. Con la etapa de construcción más elevada del motor V8 biturbo en su núcleo, traslada a la carretera un impulso hacia adelante sin concesiones a través de las ruedas de 22 pulgadas. Junto con los sistemas de suspensión específicamente ajustados, ayuda al Cayenne Turbo GT a alcanzar los mejores valores en términos de aceleración longitudinal y transversal.471 kW (640 CV)",
+     "img": "https://autosdeprimera.com/wp-content/uploads/2021/06/porsche-cayenne-coupe-turbo-gt-a-850x567.jpg",
+     "stock": 10
+  },
+  {
+     "id": 3,
+     "maker": "Lamborghini",
+     "model": "Urus Graphite Capsule ",
+     "year": 2021,
+     "price": 320000,
+     "divisa": "USD",
+     "signo": "$",
+     "description": " El Lamborghini Urus es el primer vehículo utilitario superdeportivo en todo el mundo que fusiona el alma de un coche superdeportivo y la funcionalidad de un SUV. Impulsado por un motor V8 biturbo de 4,0 litros que genera 650 CV de potencia y un par de 850 Nm, el Urus acelera de 0 a 100 km/h en 3,6 segundos y alcanza una velocidad máxima de 305 km/h. Diseño, rendimiento, dinámica de conducción y emoción al volante confluyen en un enfoque visionario impregnado del ADN Lamborghini más puro.",
+     "img": "https://www.eventosmotor.com/wp-content/uploads/2021/02/Lamborghini-urus-blog-premium-eventosmotor.jpg",
+     "stock": 10
+  },
+  {
+     "id": 4,
+     "maker": "Lamborghini",
+     "model": "Aventador IP 780-4 Ultimate",
+     "year": 2022,
+     "price": 498258,
+     "divisa": "USD",
+     "signo": "$",
+     "description": " La última versión del Aventador no es simplemente potente, es la más potente de todos los tiempos.Con el V12 aspirado de serie más vigoroso de la historia de Lamborghini, una inteligente combinación de soluciones tecnológicas avanzadas y un diseño sin igual, esta joya de solo 350 unidades es la última y definitiva expresión de una familia de superdeportivos que ha marcado la última década. El Aventador LP 780-4 Ultimae es ya un clásico convertido en icono.",
+     "img": "https://www.autonocion.com/wp-content/uploads/2021/07/Lamborghini-Aventador-LP-780-4-Ultimae-14-1130x636.jpg",
+     "stock": 10
+  },
+  {
+     "id": 5,
+     "maker": "Lamborghini",
+     "model": "Huracán EVO Fluo Capsule",
+     "year": 2022,
+     "price": 260000,
+     "divisa": "USD",
+     "signo": "$",
+     "description": " La Huracán EVO Fluo Capsule cuenta con tonos exclusivos que abren nuevas posibilidades, despiertan sueños y hacen volar fantasías. Cinco configuraciones diferentes de interiores y exteriores combinan elementos mate con colores brillantes y audaces que harán que esta nueva paleta de colores resalte tu personalidad y tu estilo individual como nunca antes. Un estilo muy deportivo, una actitud atrevida y un toque de glamour: todo se aúna a la perfección en esta obra maestra sublime. ¿Quieres hacer tuya la carretera?",
+     "img": "https://img.remediosdigitales.com/4d0b13/lamborghini-huracan-evo-fluo-capsule-1-/1366_2000.jpg",
+     "stock": 10
+  },
+  {
+     "id": 6,
+     "maker": "Lamborghini",
+     "model": "Countach",
+     "year": 2022,
+     "price": 2750000,
+     "divisa": "EUR",
+     "signo": "€",
+     "description": "Cincuenta años después de su presentación en el Salón del Automóvil de Ginebra, el legendario Lamborghini Countach vuelve a ser protagonista con una serie limitada híbrida que conmemora el diseño visionario que revolucionó para siempre el panorama de los superdeportivos modernos, sentando las bases del patrimonio de Lamborghini.  Se trata del nuevo Countach LPI 800-4. Inspirado en el pasado, pero con vocación de futuro.",
+     "img": "https://revistamotoryvolante.files.wordpress.com/2021/08/lamborghini-countach-lpi-800-4.jpg",
+     "stock": 1
+  },
+  {
+     "id": 7,
+     "maker": "Lamborghini",
+     "model": "Sián FKP 37",
+     "year": 2021,
+     "price": 2640000,
+     "divisa": "USD",
+     "signo": "$",
+     "description": "Sián FKP 37 es el primer superdeportivo alimentado por un V12 con tecnología híbrida basada en supercondensadores. Potencia, belleza y el motor V12 acoplado a un boost eléctrico dan vida a una joya de ingeniería y tecnología. Sián significa rayo en dialecto boloñés y subraya diferentes aspectos como su velocidad, que sobrepasa los 350 km/h.",
+     "img": "https://www.zero2turbo.com/wp-content/uploads/2020/03/lamborghini-sian-fkp-37-build-slot-for-sale.jpg",
+     "stock": 2
+  },
+  {
+     "id": 8,
+     "maker": " Audi",
+     "model": "R8 Coupé V10 performance RWD",
+     "year": 2022,
+     "price": 152000,
+     "divisa": "EUR",
+     "signo": "€",
+     "description": "El Audi R8 Coupé V10 performance RWD 4 con un motor FSI de 5,2 litros de aspiración natural (consumo combinado de combustible 2 : 12,9 l/100 km; emisiones combinadas de CO₂ 2 : 295-294 g/km) impresiona con una potencia de 419 kW (570 hp) que actúa enteramente sobre el eje trasero. El vehículo acelera de 0 a 100 km/h en 3,7 segundos.",
+     "img": "https://awscdn.audi.cl/media/Theme_Banners_Banner_Image_Medium_Component.Theme_Banners_Banner_Image_Component/7965-banner-148695-image-medium/dh-1024-b26730/9aa6229c/1627888180/r8-05.jpg",
+     "stock": 10
+  },
+  {
+     "id": 9,
+     "maker": "Bentley",
+     "model": "CONTINENTAL GT V8",
+     "year": 2022,
+     "price": 222700,
+     "divisa": "USD",
+     "signo": "$",
+     "description": "Con un motor V8 vivo que ofrece un rendimiento irresistiblemente dinámico, acompañado por el sonido de su burbujeo excepcionalmente emotivo, el Bentley Continental GT V8 ofrece una experiencia de conducción verdaderamente cautivadora. Combine esto con un diseño elegante, artesanía contemporánea y tecnología impecable, y tendrá un gran turismo que hará que cada viaje sea impresionante.",
+     "img": "https://www.motortrend.com/uploads/sites/5/2021/03/Continental-GT-Speed-25.jpg",
+     "stock": 10
+  }
+]
