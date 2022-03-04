@@ -7,25 +7,43 @@ const ItemListContainer = () => {
 
   const [products, setProducts] = useState([]);
 
-  const getProducts = async () => {
-    try {
-      const resp = await fetch(url); //esperamos a que se cumpla la promesa
-      const data = await resp.json(); //esperamos a que se parse la respuesta
-      setProducts(data); //seteamos nuestro state de productos
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //*realizando una promesa
+
+  // const getProducts = () => {
+  //   const prodPromise = new Promise((res, rej) => {
+  //     res(url);
+  //   });
+  //   prodPromise.then((data) =>
+  //     setProducts(data)
+  //       .then((resp) => resp.json())
+  //       .then((err) => console.log(err))
+  //   );
+  // };
+  //!realizando un async
+  // const getProducts = async () => {
+  //   try {
+  //     const resp = await fetch(url); //esperamos a que se cumpla la promesa
+  //     const data = await resp.json(); //esperamos a que se parse la respuesta
+  //     setProducts(data); //seteamos nuestro state de productos
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   useEffect(() => {
-    /*uso de fetch con async/await*/
-    getProducts();
+    //!para la promesa
+    //  getProducts();
 
-    /*uso de fetch API con promesas --descomentar y comentar "getProducts()' para probar--*/
-    // fetch(url)
-    //     .then(resp => resp.json())
-    //     .then(data => setProducts(data))
-    //     .catch(err=> console.log(err));
+    /*uso de fetch con async/await*/
+    // getProducts();
+
+    //uso de fetch API con promesas --descomentar y comentar "getProducts()' para probar--*/
+
+    //Todo: fetch
+    fetch(url)
+      .then((resp) => resp.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -54,6 +72,6 @@ const StyleItemListContainer = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1024px;
-  margin: 60px auto;
+  margin: 20px auto;
   gap: 30px;
 `;

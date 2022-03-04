@@ -1,8 +1,10 @@
 import React, { useState } from "react"; //importando el estado "useState" (referencia al ciclo de vida)
 import styled from "styled-components"; // importo la dependencia de mi package.Json "styled-components" para manejar los style
-import BurguerButton from "../NavBar/BurguerButton"; //importo el efecto de mi menu
+import BurguerButton from "./BurguerButton"; //importo el efecto de mi menu
 import imagenes from "../../assets/imagenes/Imagenes"; //importo mis imagenes desde la carpeta assets hasta dicha carpeta (Imagenes)
-import { AiOutlineHome } from "react-icons/ai"; // importamos los icons
+// import { AiOutlineHome } from "react-icons/ai"; //! importamos los icons
+import { BiShoppingBag } from "react-icons/bi"; //! importamos los icons
+import { NavLink, Link } from "react-router-dom"; //Todo: rutas de react-router-dom
 
 const NavBar = () => {
   const [clicked, setClicked] = useState(false);
@@ -13,28 +15,20 @@ const NavBar = () => {
   return (
     <>
       <StyleNav>
-        <img src={imagenes.img2} alt="" />
-        <h1>
-          Tu.Auto <span>Importado</span>
-        </h1>
+        <Link to="/">
+          <img src={imagenes.img2} alt="" />
+          <h1>
+            Tu @uto <span>Importado</span>
+          </h1>
+        </Link>
         <div className={`links ${clicked ? "active" : ""}`}>
-          <a onClick={handleClick} href="#h">
-            <AiOutlineHome className="IconHome" />
-            Home
-          </a>
-          <a onClick={handleClick} href="#h">
-            <AiOutlineHome className="IconHome" />
+          <NavLink to="/Shop">
+            <BiShoppingBag className="Iconshop" />
             Shop
-          </a>
-          <a onClick={handleClick} href="#h">
-            About
-          </a>
-          <a onClick={handleClick} href="#h">
-            Contact
-          </a>
-          <a onClick={handleClick} href="#h">
-            Blog
-          </a>
+          </NavLink>
+          <NavLink to="/About">About</NavLink>
+          <NavLink to="/Contact">Contact</NavLink>
+          <NavLink to="/Blog">Blog</NavLink>
         </div>
         <div className="burguer">
           <BurguerButton clicked={clicked} handleClick={handleClick} />
@@ -57,6 +51,11 @@ const StyleNav = styled.nav`
       font-weight: bold;
     }
   }
+  h1:hover {
+    color: orange;
+    background: white;
+  }
+
   padding: 2rem;
   background-color: #333;
   display: flex;
@@ -108,10 +107,11 @@ const StyleNav = styled.nav`
         color: orange;
         background: white;
       }
-      .IconHome {
+      .Iconshop {
         position: absolute;
         width: 2rem;
         height: 2rem;
+        left: 60.5rem;
       }
 
       display: block;
