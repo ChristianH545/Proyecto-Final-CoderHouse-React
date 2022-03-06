@@ -1,6 +1,8 @@
 [
   {
      "id": 1,
+     "logo": "https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-4.png",
+     "category": "Deportivo",
      "maker": "Porsche",
      "model": "911 Turbo S",
      "year": 2021,
@@ -13,6 +15,8 @@
   },
   {
      "id": 2,
+     "logo": "https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-4.png",
+     "category": "SUV",
      "maker": "Porsche",
      "model": "Cayenne Turbo GT",
      "year": 2021,
@@ -25,6 +29,8 @@
   },
   {
      "id": 3,
+     "logo": "https://logos-marcas.com/wp-content/uploads/2021/03/Lamborghini-Logo-650x366.png",
+     "category": "SUV",
      "maker": "Lamborghini",
      "model": "Urus Graphite Capsule ",
      "year": 2021,
@@ -37,6 +43,8 @@
   },
   {
      "id": 4,
+     "logo": "https://logos-marcas.com/wp-content/uploads/2021/03/Lamborghini-Logo-650x366.png",
+     "category": "Deportivo",
      "maker": "Lamborghini",
      "model": "Aventador IP 780-4 Ultimate",
      "year": 2022,
@@ -49,6 +57,8 @@
   },
   {
      "id": 5,
+     "logo": "https://logos-marcas.com/wp-content/uploads/2021/03/Lamborghini-Logo-650x366.png",
+     "category": "Deportivo",
      "maker": "Lamborghini",
      "model": "Huracán EVO Fluo Capsule",
      "year": 2022,
@@ -61,6 +71,8 @@
   },
   {
      "id": 6,
+     "logo": "https://logos-marcas.com/wp-content/uploads/2021/03/Lamborghini-Logo-650x366.png",
+     "category": "Deportivo",
      "maker": "Lamborghini",
      "model": "Countach",
      "year": 2022,
@@ -73,6 +85,8 @@
   },
   {
      "id": 7,
+     "logo": "https://logos-marcas.com/wp-content/uploads/2021/03/Lamborghini-Logo-650x366.png",
+     "category": "Deportivo",
      "maker": "Lamborghini",
      "model": "Sián FKP 37",
      "year": 2021,
@@ -85,6 +99,8 @@
   },
   {
      "id": 8,
+     "logo": "https://www.freepnglogos.com/uploads/audi-logo-27.png",
+     "category": "Deportivo",
      "maker": " Audi",
      "model": "R8 Coupé V10 performance RWD",
      "year": 2022,
@@ -97,6 +113,8 @@
   },
   {
      "id": 9,
+     "logo": "https://logos-marcas.com/wp-content/uploads/2021/08/Bentley-Logo-650x366.png",
+     "category": "Deportivo",
      "maker": "Bentley",
      "model": "CONTINENTAL GT V8",
      "year": 2022,

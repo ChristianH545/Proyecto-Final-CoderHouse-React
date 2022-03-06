@@ -6,11 +6,14 @@ const ProductCard = ({ product }) => {
   return (
     <StyleProductCard>
       <div className="">
-        <img className="card-img-top" src={product.img} alt="" />
+        <img className="card-img-top" src={product.logo} alt="" />
         <div className="card-body">
           <h5 className="card-title">{product.model} </h5>
-          <h6> Fabricante: {product.maker}</h6>
-          <Link to="/Shop" className="btn btn-primary">
+          <h6>
+            Fabricante: {product.maker}
+            Catergoria: {product.category}
+          </h6>
+          <Link to={`/item/${product.id}`} className="btn btn-primary">
             Detalles
           </Link>
         </div>
