@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import styled from "styled-components";
 
 const ItemDetailContainer = () => {
   //!este seria backend haciendo un llamado a la API
@@ -29,11 +30,20 @@ const ItemDetailContainer = () => {
   return (
     <>
       {/* este seria el padre contenedor para los style  */}
-      <div key={items.id}>
-        <ItemDetail item={items} />
-      </div>
+      <StyleItemDetailContainer>
+        <div key={items.id}>
+          <ItemDetail item={items} />
+        </div>
+      </StyleItemDetailContainer>
     </>
   );
 };
 
 export default ItemDetailContainer;
+//*style de nuestro contenedor padre
+const StyleItemDetailContainer = styled.div`
+  background: #dfc2f2;
+  background-image: linear-gradient(135deg, #ce9ffc 10%, #7367f0 100%);
+  background-attachment: fixed;
+  background-size: cover;
+`;
