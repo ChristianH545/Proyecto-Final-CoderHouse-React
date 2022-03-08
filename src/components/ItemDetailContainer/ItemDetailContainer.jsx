@@ -2,10 +2,11 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import styled from "styled-components";
+import NavBar from "../../layout/NavBar/NavBar";
 
 const ItemDetailContainer = () => {
   //!este seria backend haciendo un llamado a la API
-  const url = "https://run.mocky.io/v3/d10a45e6-1e78-4833-a721-b7502245e0c3";
+  const url = "https://run.mocky.io/v3/5d193438-2a15-424c-b1db-f3c8faf9266e";
   const { id } = useParams();
   console.log(id);
 
@@ -29,6 +30,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
+      <NavBar />
       {/* este seria el padre contenedor para los style  */}
       <StyleItemDetailContainer>
         <div key={items.id}>
@@ -42,8 +44,6 @@ const ItemDetailContainer = () => {
 export default ItemDetailContainer;
 //*style de nuestro contenedor padre
 const StyleItemDetailContainer = styled.div`
-  background: #dfc2f2;
-  background-image: linear-gradient(135deg, #ce9ffc 10%, #7367f0 100%);
-  background-attachment: fixed;
-  background-size: cover;
+  font-weight: 400;
+  background-color: #efefef;
 `;

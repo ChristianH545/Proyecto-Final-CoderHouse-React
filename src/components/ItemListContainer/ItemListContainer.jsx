@@ -71,7 +71,7 @@ const StyleItemListContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1024px;
-  margin: 20px auto;
+  max-width: 1348px;
+  margin: 50px auto;
   gap: 30px;
 `;

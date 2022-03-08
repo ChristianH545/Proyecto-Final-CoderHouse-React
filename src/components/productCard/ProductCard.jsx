@@ -5,18 +5,15 @@ import { Link } from "react-router-dom"; //Todo: rutas de react-router-dom
 const ProductCard = ({ product }) => {
   return (
     <StyleProductCard>
-      <div className="">
-        <img className="card-img-top" src={product.logo} alt="" />
-        <div className="card-body">
-          <h5 className="card-title">{product.model} </h5>
-          <h6>
-            Fabricante: {product.maker}
-            Catergoria: {product.category}
-          </h6>
-          <Link to={`/item/${product.id}`} className="btn btn-primary">
-            Detalles
-          </Link>
-        </div>
+      <div class="box">
+        <img src={product.img} alt="" className="img-cars" />
+        <span className="text-maker cars ">{product.maker}</span>
+        <span className="text-model cars ">
+          <b>{product.model}</b>
+        </span>
+        <Link to={`/item/${product.id}`} className="btn btn-primary">
+          Detalles
+        </Link>
       </div>
     </StyleProductCard>
   );
@@ -26,11 +23,59 @@ export default ProductCard;
 
 //!Estilos para ProductCard
 
-const StyleProductCard = styled.article`
-  box-sizing: border-box;
-  border: 2px solid black;
+const StyleProductCard = styled.div`
+  background: rgb(255, 255, 255);
+  border-radius: 9px;
   float: left;
-  width: 18rem;
+  box-shadow: 1px 3px 2px 2px #cfcdcd;
+  margin-right: 27px;
+  height: 340px;
+  width: 400px;
+  background: repeating-linear-gradient(#17202a 0px, #17202a 5px);
+
+  .img-cars {
+    object-fit: cover;
+    height: 210px;
+    width: 400px;
+    background: rgb(230, 229, 229);
+    padding: 0px;
+    border-radius: 9px 9px 0px 0px;
+  }
+
+  .cars {
+    font-family: Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    display: block;
+    margin-left: 5px;
+    position: relative;
+  }
+
+  .text-maker {
+    color: #fbfcfc;
+    font-size: 18px;
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px #17202a;
+  }
+
+  .text-model {
+    color: #fbfcfc;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px #17202a;
+  }
+
+  .btn {
+    margin: 20px 155px;
+    color: #fdfefe;
+    font-size: 17px;
+    top: 20px;
+    background: #17202a;
+    border-radius: 20%;
+  }
+  .btn:hover {
+    background: #17202a;
+    color: #f5b041;
+  }
 `;
 
 //   .product-card__img {
