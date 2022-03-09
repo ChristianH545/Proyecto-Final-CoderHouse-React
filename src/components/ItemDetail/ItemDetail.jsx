@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ItemCount from "../ItemCount/ItemCount";
 
 //!nuestro componente stateless
 
@@ -28,23 +29,15 @@ const ItemDetail = ({ item }) => {
             </div>
 
             <div className="details">
-              <span>In Stock</span>
-              <span>Free Shipping</span>
-              <span>Reviews</span>
+              <span>
+                In Stock {""} {item.stock} Unidades
+              </span>
+              <hr />
             </div>
 
             <div className="quantity">Quantity</div>
-            <div className="counter">
-              <button id="menos" className="counter-button">
-                -
-              </button>
-              <div id="quantity-cell" className="counter-button">
-                0
-              </div>
-              <button id="mas" class="counter-button">
-                +
-              </button>
-            </div>
+
+            <ItemCount stock={item.stock} />
 
             <div className="price-wrapper">
               <span id="item-price" className="price">
@@ -80,6 +73,7 @@ const ItemDetail = ({ item }) => {
           <div className="clear-cart">Очистить корзину</div>
         </div>
       </StyleItemDetail>
+      <hr />
     </>
   );
 };
