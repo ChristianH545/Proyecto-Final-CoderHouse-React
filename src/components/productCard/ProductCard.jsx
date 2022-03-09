@@ -51,6 +51,7 @@ const StyleProductCard = styled.div`
   }
 
   .text-maker {
+    text-align: ;
     color: #fbfcfc;
     font-size: 18px;
     font-weight: bold;
@@ -66,15 +67,15 @@ const StyleProductCard = styled.div`
 
   .btn {
     margin: 20px 155px;
-    color: #fdfefe;
+    color: #f5b041;
     font-size: 17px;
     top: 20px;
-    background: #17202a;
+    background: #154360;
     border-radius: 20%;
   }
   .btn:hover {
-    background: #17202a;
-    color: #f5b041;
+    background: #1251d1;
+    color: #fdfefe;
   }
 `;
 

@@ -57,7 +57,7 @@ const StyleNav = styled.nav`
   }
 
   padding: 2rem;
-  background-color: #333;
+  background-color: #1b2631;
   display: flex;
   align-items: center;
   justify-content: space-between;
