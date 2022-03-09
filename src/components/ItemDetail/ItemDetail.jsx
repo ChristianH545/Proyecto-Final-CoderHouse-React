@@ -18,18 +18,14 @@ const ItemDetail = ({ item }) => {
           </div>
 
           <div className="card-detail">
-            <h1 className="title">Fujifilm X-T10</h1>
-            <h2 className="subtitle">Mirrorless Digital Camera</h2>
+            <h1 className="title">{item.model}</h1>
+            <h2 className="subtitle">{item.maker}</h2>
 
-            <div className="features-title">Features</div>
+            <div className="descripcion-title">Descripción</div>
 
-            <ul className="list">
-              <li>16.3 MP APS-C X-Trans CMOS II Sensor</li>
-              <li>0.39" 2,360k-Dot 0.62x OLED Viewfinder</li>
-              <li>3.0" 920k-Dot Tilting LCD Monitor</li>
-              <li>Full HD 1080p Video Recording at 60 fps</li>
-              <li>Built-In Wi-Fi Connectivity</li>
-            </ul>
+            <div className="description-products">
+              <p>{item.description}</p>
+            </div>
 
             <div className="details">
               <span>In Stock</span>
@@ -39,18 +35,21 @@ const ItemDetail = ({ item }) => {
 
             <div className="quantity">Quantity</div>
             <div className="counter">
-              <button id="minus" className="counter-button">
+              <button id="menos" className="counter-button">
                 -
               </button>
-              <div id="quantity-cell" className="counter-button"></div>
-              <button id="plus" class="counter-button">
+              <div id="quantity-cell" className="counter-button">
+                0
+              </div>
+              <button id="mas" class="counter-button">
                 +
               </button>
             </div>
 
             <div className="price-wrapper">
-              <span id="item-price" className="price"></span>
-              <span className="old-price">Old Price: $799</span>
+              <span id="item-price" className="price">
+                {item.signo} {item.price} {item.divisa}
+              </span>
             </div>
             <button id="add-to-cart" className="button">
               Add to Cart
@@ -71,9 +70,9 @@ const ItemDetail = ({ item }) => {
           <div className="cart-text">
             <div id="cart-empty"> Compra Seguro </div>
             <div id="cart-with-items">
-              В корзине:{" "}
+              Cart With Items:{"0"}
               <span id="cart-total-items" className="cart-items"></span>
-              товаров на сумму{" "}
+              Cart Items{"0"}
               <span id="cart-total-price" className="cart-price"></span>
             </div>
           </div>
@@ -130,22 +129,22 @@ const StyleItemDetail = styled.div`
     z-index: 1;
 
     width: 540px;
-    height: 700px;
-    background-color: #ffffff;
+    height: 840px;
+    background-color: #1b2631;
     padding-top: 75px;
     padding-bottom: 75px;
     padding-left: 75px;
     padding-right: 40px;
     box-sizing: border-box;
 
-    /* тень */
+    /* sombra */
     -webkit-box-shadow: -22px 1px 28px -17px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: -22px 1px 28px -17px rgba(0, 0, 0, 0.6);
     box-shadow: -22px 1px 28px -17px rgba(0, 0, 0, 0.6);
   }
 
   .title {
-    color: #000000;
+    color: #fdfefe;
     font-size: 34px;
     text-transform: uppercase;
     margin-top: 0;
@@ -153,7 +152,7 @@ const StyleItemDetail = styled.div`
   }
 
   .subtitle {
-    color: #3a4d5c;
+    color: #f4d03f;
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
@@ -161,16 +160,16 @@ const StyleItemDetail = styled.div`
     margin-bottom: 40px;
   }
 
-  .features-title {
-    color: #7c8d9c;
+  .descripcion-title {
+    color: #fdfefe;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.33px;
     margin-bottom: 20px;
   }
 
-  .list {
-    color: #7c8d9c;
+  .description-products {
+    color: #fdfefe;
     font-size: 13px;
     line-height: 28px;
     margin-top: 0px;
@@ -179,24 +178,8 @@ const StyleItemDetail = styled.div`
     list-style-type: none;
   }
 
-  .list li {
-    position: relative;
-  }
-
-  .list li::before {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 5px;
-    background-color: #00c217;
-
-    position: absolute;
-    left: -15px;
-    top: 12px;
-  }
-
   .details {
-    color: #7c8d9c;
+    color: #f39c12;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.28px;
@@ -209,7 +192,7 @@ const StyleItemDetail = styled.div`
   }
 
   .quantity {
-    color: #7c8d9c;
+    color: #ffd617;
     font-size: 11px;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -229,13 +212,14 @@ const StyleItemDetail = styled.div`
     justify-content: center;
     align-items: center;
     margin-left: -1px;
+    color: #ffffff;
   }
 
-  #minus,
-  #plus {
+  #menos,
+  #mas {
     width: 40px;
-    height: 37px;
-    border: 1px solid #7c8d9c;
+    height: 35px;
+    border: 2px solid #ffffff;
     background-color: #ffffff;
     color: black;
     font-size: 16px;
@@ -249,13 +233,8 @@ const StyleItemDetail = styled.div`
   }
 
   .price {
-    color: #3a4d5c;
+    color: #fdfefe;
     font-size: 37px;
-  }
-
-  .old-price {
-    color: #7c8d9c;
-    font-size: 13px;
   }
 
   .button {
