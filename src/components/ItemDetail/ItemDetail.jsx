@@ -1,10 +1,22 @@
 import React from "react";
-import styled from "styled-components";
-import ItemCount from "../ItemCount/ItemCount";
-
-//!nuestro componente stateless
+import styled from "styled-components"; //!nuestro componente stateless
+import ItemCount from "../ItemCount/ItemCount"; //!LA CONEXION QUE TENEMOS CON ItemCount
+import { useContext } from "react"; //!SE IMPORTA PARA UTILZAR EL useContex EN hook
+import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
+import { useState } from "react";
+// import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
+  const { addItem, clearCart } = useContext(CartContext);
+
+  const [isInCart, setIsInCart] = useState(false);
+
+  //CREAMOS UNA FUNCTION QUE VA A RECIBIR  UNA CANTIDAD DE NUESTRO STOCK
+  function addToCart(quantity) {
+    addItem(item, quantity);
+    setIsInCart(true);
+  }
+
   return (
     <>
       <StyleItemDetail id="container">
@@ -27,31 +39,24 @@ const ItemDetail = ({ item }) => {
             <div className="description-products">
               <p>{item.description}</p>
             </div>
+            {/* //*SERIA EL BOTON DE isInCart = TERMINAR COMPRA LE PASAREMOS UN link */}
 
-            <div className="details">
-              <span>
-                In Stock {""} {item.stock} Unidades
-              </span>
-              <hr />
-            </div>
+            {/* //Todo: tengo que crear ese Component para que funcione el link de la url*/}
+            {/* <Link to="/cart"> */}
 
-            <div className="quantity">Quantity</div>
-
-            <ItemCount stock={item.stock} />
-
-            <div className="price-wrapper">
-              <span id="item-price" className="price">
-                {item.signo} {item.price} {item.divisa}
-              </span>
-            </div>
-            <button id="add-to-cart" className="button">
-              Add to Cart
-            </button>
-            <button className="button-wish-list">Add to Wish List</button>
+            {isInCart ? (
+              <button className="button-terminar-compra" type="button">
+                Terminar Compra{" "}
+              </button>
+            ) : (
+              <ItemCount addToCart={addToCart} stock={item.stock} />
+            )}
+            {/* </Link> */}
           </div>
         </div>
-
+        {/* ESTE SERIA EL CONTADOR DEL CART DE LA IMG */}
         <div className="cart">
+          {"0"}
           <div className="cart-img-wrapper">
             <img
               className="cart-img"
@@ -59,18 +64,25 @@ const ItemDetail = ({ item }) => {
               alt="Shipping Cart Icon"
             />
           </div>
-
           <div className="cart-text">
-            <div id="cart-empty"> Compra Seguro </div>
+            <div id="cart-empty"></div>
             <div id="cart-with-items">
               Cart With Items:{"0"}
+              <hr />
               <span id="cart-total-items" className="cart-items"></span>
               Cart Items{"0"}
-              <span id="cart-total-price" className="cart-price"></span>
+              <hr />
+              <span id="cart-total-price" className="cart-price">
+                Total Price: {item.price} {item.divisa}
+              </span>
             </div>
           </div>
 
-          <div className="clear-cart">Очистить корзину</div>
+          {/* ESTE PUEDE SER EL BUTTON PARA ELIMIDAR LOS PRODUCTO ASIGNADO AL CART */}
+          <button onClick={clearCart} className="clear-cart">
+            {" "}
+            Clear Cart{" "}
+          </button>
         </div>
       </StyleItemDetail>
       <hr />
@@ -148,7 +160,7 @@ const StyleItemDetail = styled.div`
   .subtitle {
     color: #f4d03f;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 40px;
@@ -163,16 +175,18 @@ const StyleItemDetail = styled.div`
   }
 
   .description-products {
+    text-align: justify;
     color: #fdfefe;
     font-size: 13px;
     line-height: 28px;
     margin-top: 0px;
     margin-bottom: 40px;
-    padding-left: 15px;
+    padding-left: 2px;
     list-style-type: none;
   }
 
   .details {
+    font-weight: 00;
     color: #f39c12;
     font-size: 11px;
     text-transform: uppercase;
@@ -186,6 +200,7 @@ const StyleItemDetail = styled.div`
   }
 
   .quantity {
+    font-weight: 600;
     color: #ffd617;
     font-size: 11px;
     text-transform: uppercase;
@@ -283,7 +298,7 @@ const StyleItemDetail = styled.div`
   }
 
   #cart-with-items {
-    display: none;
+    display: ;
   }
 
   .cart-items,
@@ -293,11 +308,28 @@ const StyleItemDetail = styled.div`
 
   .clear-cart {
     margin-left: auto;
-
-    color: #ecb9b9;
-    border-bottom: 1px dotted #ecb9b9;
+    width: 200px;
+    height: 45px;
+    background-color: #1251d1;
+    margin-right: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border: none;
     cursor: pointer;
-
-    display: none;
+  }
+  .button-terminar-compra {
+    margin-left: auto;
+    width: 200px;
+    height: 45px;
+    background-color: #1251d1;
+    margin-right: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
   }
 `;

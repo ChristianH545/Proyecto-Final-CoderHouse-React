@@ -11,21 +11,24 @@ import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import Item from "../src/components/ItemDetailContainer/ItemDetailContainer";
 import Components404 from "./components/Components404/Components404";
+import { CartContextProvider } from "./components/context/CartContext";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<Home />} />
-        <Route exact path="/shop" element={<Shop />} />
-      </Route>
-      <Route exact path="/about" element={<About />} />
-      <Route exact path="/contact" element={<Contact />} />
-      <Route exact path="/blog" element={<Blog />} />
-      <Route exact path="/item/:id" element={<Item />} />
+  <CartContextProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route exact path="/shop" element={<Shop />} />
+        </Route>
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/blog" element={<Blog />} />
+        <Route exact path="/item/:id" element={<Item />} />
 
-      <Route component={Components404} />
-    </Routes>
-  </BrowserRouter>,
+        <Route component={Components404} />
+      </Routes>
+    </BrowserRouter>
+  </CartContextProvider>,
   document.getElementById("root")
 );
