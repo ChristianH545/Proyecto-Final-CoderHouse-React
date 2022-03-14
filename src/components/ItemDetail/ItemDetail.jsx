@@ -4,7 +4,7 @@ import ItemCount from "../ItemCount/ItemCount"; //!LA CONEXION QUE TENEMOS CON I
 import { useContext } from "react"; //!SE IMPORTA PARA UTILZAR EL useContex EN hook
 import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
   const { addItem, clearCart } = useContext(CartContext);
@@ -41,17 +41,17 @@ const ItemDetail = ({ item }) => {
             </div>
             {/* //*SERIA EL BOTON DE isInCart = TERMINAR COMPRA LE PASAREMOS UN link */}
 
-            {/* //Todo: tengo que crear ese Component para que funcione el link de la url*/}
-            {/* <Link to="/cart"> */}
+            {/* //Todo: tengo que crear ese Component para que funcione el link de la url  (Realizado)*/}
 
             {isInCart ? (
-              <button className="button-terminar-compra" type="button">
-                Terminar Compra{" "}
-              </button>
+              <Link to="/Cart">
+                <button className="button-terminar-compra" type="button">
+                  Terminar Compra{" "}
+                </button>{" "}
+              </Link>
             ) : (
               <ItemCount addToCart={addToCart} stock={item.stock} />
             )}
-            {/* </Link> */}
           </div>
         </div>
         {/* ESTE SERIA EL CONTADOR DEL CART DE LA IMG */}
