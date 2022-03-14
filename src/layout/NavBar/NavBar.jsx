@@ -22,13 +22,19 @@ const NavBar = () => {
           </h1>
         </Link>
         <div className={`links ${clicked ? "active" : ""}`}>
-          <NavLink to="/Shop">
+          <NavLink to="/Shop" activeClassName="selected">
             <BiShoppingBag className="Iconshop" />
             Shop
           </NavLink>
-          <NavLink to="/About">About</NavLink>
-          <NavLink to="/Contact">Contact</NavLink>
-          <NavLink to="/Blog">Blog</NavLink>
+          <NavLink activeClassName="active" to="/About">
+            About
+          </NavLink>
+          <NavLink activeClassName="active" to="/Contact">
+            Contact
+          </NavLink>
+          <NavLink activeClassName="active" to="/Blog">
+            Blog
+          </NavLink>
         </div>
         <div className="burguer">
           <BurguerButton clicked={clicked} handleClick={handleClick} />
