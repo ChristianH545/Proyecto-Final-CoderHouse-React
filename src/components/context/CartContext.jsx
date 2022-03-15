@@ -16,31 +16,11 @@ export function CartContextProvider({ children }) {
    * *countItemsInCart -> Contar item en el Carrito
    */
 
-  //TODO: tutor pero tengo un problema y me gustaria que me orientara ejemplo de donde sale amount creo que ese es el error que me presenta e codigo. podria explicarme? por favor para entenderla
+  //TODO: tutor sigue sin funcionar
   //* CREAMOS UNA FUNCTION LLAMADA removerItem (id)
 
-  //     function removerItem(id, amount) {
-
-  //     const itemEncontrado = itemCart.find((item) => item.id === id);
-
-  // 	if (itemEncontrado?.quantity > 1 && itemEncontrado.quantity > amount {
-
-  //       let copyCart = [...itemCart];
-
-  //       let index = itemCart.findIndex((i) => i.id === item.id);
-
-  // 	  copyCart[index].quantity -= amount;
-
-  // 	  setItemCart(copyCart);
-
-  //     } else if (itemEncontrado !== undefined) {
-
-  //       setItemCart(itemCart.filter((item) => item.id !== id));
-
-  //    }
-
-  // }
-
+  const removeItem = (id) =>
+    setItemsCart(itemCart.filter((item) => item.id === id));
   //*AHORA VAMOS A CREAR FUNCTION clearCart PARA LIMPIAR NUESTRO
   function clearCart() {
     setItemsCart([]);
@@ -69,7 +49,9 @@ export function CartContextProvider({ children }) {
 
   return (
     <>
-      <CartContext.Provider value={{ addItem, itemCart, clearCart }}>
+      <CartContext.Provider
+        value={{ addItem, itemCart, clearCart, removeItem }}
+      >
         {children}
       </CartContext.Provider>
     </>

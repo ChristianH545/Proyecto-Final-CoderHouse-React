@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
-  const { addItem, clearCart } = useContext(CartContext);
+  const { addItem, clearCart, removeItem } = useContext(CartContext);
 
   const [isInCart, setIsInCart] = useState(false);
 
@@ -82,6 +82,10 @@ const ItemDetail = ({ item }) => {
           <button onClick={clearCart} className="clear-cart">
             {" "}
             Clear Cart{" "}
+          </button>
+          <button onClick={removeItem} className="remove-cart">
+            {" "}
+            Remove Items{" "}
           </button>
         </div>
       </StyleItemDetail>
