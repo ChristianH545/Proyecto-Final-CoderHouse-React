@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
-  const { addItem, clearCart, removeItem } = useContext(CartContext);
+ const { addItem, clearCart, removeItem } = useContext(CartContext);
 
   const [isInCart, setIsInCart] = useState(false);
 

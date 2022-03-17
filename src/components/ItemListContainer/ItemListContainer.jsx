@@ -39,6 +39,7 @@ const ItemListContainer = () => {
 
     //uso de fetch API con promesas --descomentar y comentar "getProducts()' para probar--*/
 
+    //EJECUTAMOS LA FUNCION
     //Todo: fetch
     fetch(url)
       .then((resp) => resp.json())
