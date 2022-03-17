@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components"; // importo la dependencia de mi package.Json "styled-components" para manejar los style
 import ProductCard from "../productCard/ProductCard";
+import { collection, getDocs } from "firebase/firestore"; //firebase/ firestore import
+import db from "../firebase/firebaseConfing";
 
 const ItemListContainer = () => {
   const url = "https://run.mocky.io/v3/d10a45e6-1e78-4833-a721-b7502245e0c3";
@@ -31,6 +33,14 @@ const ItemListContainer = () => {
   // };
 
   useEffect(() => {
+    //!CREACION DE UNA VARIBLE PARA UTILIZAR EL "firebase"
+    const obtenerDatos = async () => {
+      const itemProducts = await getDocs(collection(db, "detalles"));
+      itemProducts.forEach((documento) => {
+        console.table(documento.data());
+      });
+    };
+
     //!para la promesa
     //  getProducts();
 
@@ -45,6 +55,7 @@ const ItemListContainer = () => {
       .then((resp) => resp.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
+    obtenerDatos();
   }, []);
 
   return (
