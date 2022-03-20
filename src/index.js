@@ -12,7 +12,7 @@ import Home from "./pages/Home";
 import Item from "../src/components/ItemDetailContainer/ItemDetailContainer";
 import Components404 from "./components/Components404/Components404";
 import { CartContextProvider } from "./components/context/CartContext";
-import { Cart } from "./components/cart/Cart";
+import { Cart } from "./components/Cart/Cart";
 
 ReactDOM.render(
   <CartContextProvider>

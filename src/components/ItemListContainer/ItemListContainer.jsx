@@ -5,7 +5,7 @@ import { collection, getDocs } from "firebase/firestore"; //firebase/ firestore 
 import db from "../firebase/firebaseConfing";
 
 const ItemListContainer = () => {
-  const url = "https://run.mocky.io/v3/d10a45e6-1e78-4833-a721-b7502245e0c3";
+  // const url = "https://run.mocky.io/v3/d10a45e6-1e78-4833-a721-b7502245e0c3";
 
   const [products, setProducts] = useState([]);
 
@@ -34,28 +34,31 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     //!CREACION DE UNA VARIBLE PARA UTILIZAR EL "firebase"
-    const obtenerDatos = async () => {
-      const itemProducts = await getDocs(collection(db, "detalles"));
-      itemProducts.forEach((documento) => {
-        console.table(documento.data());
-      });
+    const getProducts = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "producto"));
+        const docs = [];
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id });
+          console.table(doc.data());
+        });
+        setProducts(docs);
+      } catch (error) {
+        console.log(error);
+      }
     };
-
     //!para la promesa
     //  getProducts();
-
     /*uso de fetch con async/await*/
     // getProducts();
-
     //uso de fetch API con promesas --descomentar y comentar "getProducts()' para probar--*/
-
     //EJECUTAMOS LA FUNCION
     //Todo: fetch
-    fetch(url)
-      .then((resp) => resp.json())
-      .then((data) => setProducts(data))
-      .catch((err) => console.log(err));
-    obtenerDatos();
+    // fetch(url)
+    //   .then((resp) => resp.json())
+    //   .then((data) => setProducts(data))
+    //   .catch((err) => console.log(err));
+    getProducts();
   }, []);
 
   return (
