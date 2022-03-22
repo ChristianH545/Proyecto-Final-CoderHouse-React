@@ -41,10 +41,11 @@ const ItemListContainer = () => {
         querySnapshot.forEach((doc) => {
           docs.push({ ...doc.data(), id: doc.id });
           console.table(doc.data());
+          console.log(doc.id);
         });
         setProducts(docs);
       } catch (error) {
-        console.log(error);
+        console.log(error, "error de firebase");
       }
     };
     //!para la promesa
@@ -60,7 +61,7 @@ const ItemListContainer = () => {
     //   .catch((err) => console.log(err));
     getProducts();
   }, []);
-
+  console.table(products);
   return (
     <StyleItemListContainer>
       {products.length ? (

@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
- const { addItem, clearCart, removeItem } = useContext(CartContext);
+  const { addItem, clearCart, removeItem } = useContext(CartContext);
 
   const [isInCart, setIsInCart] = useState(false);
 
@@ -24,7 +24,7 @@ const ItemDetail = ({ item }) => {
           <div class="card-photo-block">
             <img src={item.logo} className="card-product-logo" alt="Logo" />
             <img
-              src={item.img}
+              src={item.imgDetail}
               className="card-product-image"
               alt="Productimage"
             />
