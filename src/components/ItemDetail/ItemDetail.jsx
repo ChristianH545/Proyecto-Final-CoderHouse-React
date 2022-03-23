@@ -44,7 +44,7 @@ const ItemDetail = ({ item }) => {
             {/* //Todo: tengo que crear ese Component para que funcione el link de la url  (Realizado)*/}
 
             {isInCart ? (
-              <Link to="/Cart">
+              <Link to={`/Cart/${item.model}`}>
                 <button className="button-terminar-compra" type="button">
                   Terminar Compra{" "}
                 </button>{" "}

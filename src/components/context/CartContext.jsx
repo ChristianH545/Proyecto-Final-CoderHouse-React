@@ -10,7 +10,7 @@ export function CartContextProvider({ children }) {
 
   /**TODO:
    * addItem -> Agregar item al carrito
-   * *removerItem (id) -> Remover item del carrito
+   * removerItem (id) -> Remover item del carrito
    * isItemInCart(id) -> Validar que (id) item este en el Carrito
    * clearCart -> Vaciar Carrito
    * *countItemsInCart -> Contar item en el Carrito

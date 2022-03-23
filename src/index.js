@@ -12,7 +12,7 @@ import Home from "./pages/Home";
 import Item from "../src/components/ItemDetailContainer/ItemDetailContainer";
 import Components404 from "./components/Components404/Components404";
 import { CartContextProvider } from "./components/context/CartContext";
-import { Cart } from "./components/Cart/Cart";
+import CartContainer from "./components/CartContainer/CartContainer";
 
 ReactDOM.render(
   <CartContextProvider>
@@ -25,8 +25,8 @@ ReactDOM.render(
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/blog" element={<Blog />} />
-        <Route exact path="/item/:id" element={<Item />} />
-        <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/item/:id/:model" element={<Item />} />
+        <Route exact path="/cart/:model" element={<CartContainer />} />
 
         <Route component={Components404} />
       </Routes>

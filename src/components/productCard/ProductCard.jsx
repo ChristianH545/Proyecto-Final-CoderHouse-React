@@ -11,7 +11,10 @@ const ProductCard = ({ product }) => {
         <span className="text-model cars ">
           <b>{product.model}</b>
         </span>
-        <Link to={`/item/${product.id}`} className="btn btn-primary">
+        <Link
+          to={`/item/${product.id}/${product.model}`}
+          className="btn btn-primary"
+        >
           Detalles
         </Link>
       </div>

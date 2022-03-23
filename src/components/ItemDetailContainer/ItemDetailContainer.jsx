@@ -9,8 +9,8 @@ import db from "../firebase/firebaseConfing";
 const ItemDetailContainer = () => {
   //!este seria backend haciendo un llamado a la API
   // const url = "https://run.mocky.io/v3/5d193438-2a15-424c-b1db-f3c8faf9266e";
-  const { id } = useParams();
-  console.log(id, "id del useParams");
+  const { id, model } = useParams();
+  console.log(id, model, "id del useParams");
 
   //!el manejo del estado de react
   const [items, setItems] = useState([]);
@@ -28,7 +28,10 @@ const ItemDetailContainer = () => {
         });
         const idInt = String(id);
         const itemFound = docs.find((r) => r.id === idInt);
-        setItems(itemFound);
+        const modelInt = String(model);
+        const itemFoundModel = docs.find((r) => r.model === modelInt);
+
+        setItems(itemFound, itemFoundModel);
         console.log(docs, "docs");
       } catch (error) {
         console.log(error, "error de firebase");
@@ -47,7 +50,7 @@ const ItemDetailContainer = () => {
     //     setItems(itemFound);
     //    })
     //    .catch((err) => console.log(err + "este esel error"));
-  }, [id]);
+  }, [id, model]);
   console.table(items.id, "contenido del items");
   return (
     <>
