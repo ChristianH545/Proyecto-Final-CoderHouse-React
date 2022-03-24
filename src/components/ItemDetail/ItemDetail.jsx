@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components"; //!nuestro componente stateless
 import ItemCount from "../ItemCount/ItemCount"; //!LA CONEXION QUE TENEMOS CON ItemCount
-import { useContext } from "react"; //!SE IMPORTA PARA UTILZAR EL useContex EN hook
+import { useContext } from "react"; //!SE IMPORTA PARA UTILZAR EL useContex EN hooks
 import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -40,8 +40,6 @@ const ItemDetail = ({ item }) => {
               <p>{item.description}</p>
             </div>
             {/* //*SERIA EL BOTON DE isInCart = TERMINAR COMPRA LE PASAREMOS UN link */}
-
-            {/* //Todo: tengo que crear ese Component para que funcione el link de la url  (Realizado)*/}
 
             {isInCart ? (
               <Link to={`/Cart/${item.model}`}>
