@@ -2,65 +2,57 @@ import { createContext } from "react";
 import { useState } from "react";
 
 //ESTA SERÁ NUESTRA FUNCION DE  "createContext()" ES = "CartContext"
-const CartContext = createContext();
+export const CartContext = createContext();
 
 export function CartContextProvider({ children }) {
-  //!HOOKS
-  const [itemCart, setItemsCart] = useState([]);
+  //!HOOKS useState
+  const [itemCart, setItemCart] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [totalItemCart, setTotalItemCart] = useState(0);
-
-  /**TODO:
-   * addItem -> Agregar item al carrito
-   * removerItem (id) -> Remover item del carrito
-   * isItemInCart(id) -> Validar que (id) item este en el Carrito
-   * clearCart -> Vaciar Carrito
-   * *countItemsInCart -> Contar item en el Carrito
-   */
-
-  const add = (value, multiplier) => {
-    return value * multiplier;
+  //! VARIABLE
+  const calc = (price, quantity) => {
+    return price * quantity;
   };
-  //*  FUNCTION  removerItem (id)
-
-  const removeItem = (item) => {
-    if (isItemInCart(item.id)) {
-      let index = itemCart.findIndex((i) => i.id === item.id);
-      let copyCart = [...itemCart];
-      setCartTotal(cartTotal - add(item.price, item.quantity));
-      setTotalItemCart(totalItemCart - item.quantity);
-      copyCart.splice(index, 1);
-      setItemsCart(copyCart);
-    }
-  };
-  //* FUNCTION clearCart
-  function clearCart() {
-    setItemsCart([]);
-    setCartTotal(0);
-    setTotalItemCart(0);
+  function isInCart(id) {
+    return itemCart.some((product) => product.id === id);
   }
   //* FUNCION addItem
   function addItem(item, quantity) {
-    //!PREGUNTAMOS A item SI TIENE UN id
-    if (isItemInCart(item.id)) {
+    // Paso 2: En el caso exista el producto se recorre nuevamente el arreglo para identificar el index
+    if (isInCart(item.id)) {
       let index = itemCart.findIndex((i) => i.id === item.id);
-      let copyCart = [...itemCart];
-      copyCart[index].quantity += quantity;
-      setCartTotal(cartTotal + add(item.price, quantity));
+      //Paso 3: Clonar carrito y ubicarse en el index encontrado para sumar cantidad
+      let cloneCart = [...itemCart];
+      cloneCart[index].qty += quantity;
+      //Paso 4: Actualizar total, carrito y cantidades totales
+      setCartTotal(cartTotal + calc(item.price, quantity));
+      setItemCart(cloneCart);
       setTotalItemCart(totalItemCart + quantity);
-      setItemsCart(copyCart);
     } else {
-      const itemToAdd = { ...item, quantity };
-      setItemsCart([...itemCart, itemToAdd]);
-      setCartTotal(cartTotal + add(item.price, item.quantity));
-      setTotalItemCart(totalItemCart + item.quantity);
+      // paso 5: en el caso no exista el producto se agregar 'qty' como nueva prop y se actualiza el estado del carrito, total y cantidades
+      const newItemCart = { ...item, quantity: quantity };
+      console.log("New item in Cart: ", newItemCart);
+      setItemCart([...itemCart, newItemCart]);
+      setCartTotal(cartTotal + calc(newItemCart.price, newItemCart.quantity));
+      setTotalItemCart(totalItemCart + newItemCart.quantity);
     }
   }
+
+  //*  FUNCTION  removerItem (id)
+
+  const removeItem = (id) =>
+    setItemCart(itemCart.filter((item) => item.id === id));
+  //* FUNCTION clearCart
+  const clearCart = () => {
+    setItemCart([]);
+    setCartTotal(0);
+    setTotalItemCart(0);
+  };
   //* FUNCION isItemInCart
 
-  function isItemInCart(id) {
-    return itemCart.some((everyitem) => everyitem.id === id);
-  }
+  // const isItemInCart = (id) => {
+  //   return itemCart.some((everyitem) => everyitem.id === id);
+  // };
 
   return (
     <>

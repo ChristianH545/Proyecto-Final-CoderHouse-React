@@ -21,8 +21,6 @@ const ItemDetailContainer = () => {
         const docs = [];
         listProducts.forEach((doc) => {
           docs.push({ ...doc.data(), id: doc.id });
-
-          console.log(doc.id, "id doc");
         });
         const idInt = String(id);
         const itemFound = docs.find((r) => r.id === idInt);

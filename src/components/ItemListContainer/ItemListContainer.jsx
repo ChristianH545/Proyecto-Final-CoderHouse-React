@@ -40,8 +40,6 @@ const ItemListContainer = () => {
         const docs = [];
         querySnapshot.forEach((doc) => {
           docs.push({ ...doc.data(), id: doc.id });
-          console.table(doc.data());
-          console.log(doc.id);
         });
         setProducts(docs);
       } catch (error) {

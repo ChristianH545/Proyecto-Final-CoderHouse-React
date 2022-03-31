@@ -1,47 +1,21 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react/cjs/react.development";
+// import { useParams } from "react-router-dom";
+import { useContext } from "react";
 import styled from "styled-components";
 import NavBar from "../../layout/NavBar/NavBar";
 import CartView from "../Cart/CartView";
-import { collection, getDocs } from "firebase/firestore";
-import db from "../firebase/firebaseConfing";
+import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
 
 const CartContainer = () => {
-  const { model } = useParams();
-  console.log(model, "id del useParams");
+  // const { model } = useParams();
 
-  //!el manejo del estado de react
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    //!CREACION DE UNA VARIBLE PARA UTILIZAR EL "firebase"
-    const getCart = async () => {
-      try {
-        const listCart = await getDocs(collection(db, "producto"));
-        const docs = [];
-        listCart.forEach((doc) => {
-          docs.push({ ...doc.data(), id: doc.id });
-
-          console.log(doc.id, "id doc");
-        });
-        const modelInt = String(model);
-        const itemFoundModel = docs.find((r) => r.model === modelInt);
-        setCart(itemFoundModel);
-        console.log(docs, "docs");
-      } catch (error) {
-        console.log(error, "error de firebase");
-      }
-    };
-    getCart();
-  }, [model]);
+  const { itemCart } = useContext(CartContext);
+  const product = itemCart;
   return (
     <>
       <NavBar />
       <StyleCartContainer>
-        <div key={cart.id}>
-          <CartView cart={cart} />
-        </div>
+        <CartView product={product} />
       </StyleCartContainer>
     </>
   );

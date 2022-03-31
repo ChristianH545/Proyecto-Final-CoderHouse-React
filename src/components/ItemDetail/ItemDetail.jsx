@@ -5,9 +5,10 @@ import { useContext } from "react"; //!SE IMPORTA PARA UTILZAR EL useContex EN h
 import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import CartWidget from "../Cart/CartWidget";
 
-const ItemDetail = ({ item }) => {
-  const { addItem, clearCart, removeItem } = useContext(CartContext);
+const ItemDetail = ({ item, totalItemCart }) => {
+  const { addItem } = useContext(CartContext);
 
   const [isInCart, setIsInCart] = useState(false);
 
@@ -52,40 +53,7 @@ const ItemDetail = ({ item }) => {
             )}
           </div>
         </div>
-        {/* ESTE SERIA EL CONTADOR DEL CART DE LA IMG */}
-        <div className="cart">
-          {"0"}
-          <div className="cart-img-wrapper">
-            <img
-              className="cart-img"
-              src="https://i.postimg.cc/py3X5Xzk/shopping-cart.png"
-              alt="Shipping Cart Icon"
-            />
-          </div>
-          <div className="cart-text">
-            <div id="cart-empty"></div>
-            <div id="cart-with-items">
-              Cart With Items:{"0"}
-              <hr />
-              <span id="cart-total-items" className="cart-items"></span>
-              Cart Items{"0"}
-              <hr />
-              <span id="cart-total-price" className="cart-price">
-                Total Price: {item.price} {item.divisa}
-              </span>
-            </div>
-          </div>
-
-          {/* ESTE PUEDE SER EL BUTTON PARA ELIMIDAR LOS PRODUCTO ASIGNADO AL CART */}
-          <button onClick={clearCart} className="clear-cart">
-            {" "}
-            Clear Cart{" "}
-          </button>
-          <button onClick={removeItem} className="remove-cart">
-            {" "}
-            Remove Items{" "}
-          </button>
-        </div>
+        <CartWidget />
       </StyleItemDetail>
       <hr />
     </>
@@ -327,6 +295,33 @@ const StyleItemDetail = styled.div`
     height: 45px;
     background-color: #1251d1;
     margin-right: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+  }
+  .ir-shop {
+    margin-left: auto;
+    width: 200px;
+    height: 45px;
+    background-color: #229954;
+    margin-right: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+  }
+  .remove-cart {
+    margin-left: auto;
+    width: 150px;
+    height: 45px;
+    background-color: #e74c3c;
+    margin-right: 10px;
+    margin-left: -10px;
     color: #ffffff;
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
