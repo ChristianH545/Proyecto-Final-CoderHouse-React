@@ -3,9 +3,30 @@ import Uno from "../../assets/imagenes/img/img-auto1.jpg";
 import Dos from "../../assets/imagenes/img/img-auto2.jpg";
 import Tres from "../../assets/imagenes/img/img-auto3.jpg";
 import "../ Login/Login.css";
+//! para utilizar la validacion y autenticar de firebase
+import { app } from "../firebase/firebaseConfing";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+
+const auth = getAuth(app);
 
 const Login = () => {
   const [registro, setRegistro] = useState(false);
+
+  const handlerSubmit = async (e) => {
+    e.preventDefault();
+    const correo = e.target.email.value;
+    const contraseña = e.target.password.value;
+    if (registro) {
+      await createUserWithEmailAndPassword(auth, correo, contraseña);
+    } else {
+      await signInWithEmailAndPassword(auth, correo, contraseña);
+    }
+  };
+
   return (
     <>
       <div className="row container p-4 ">
@@ -58,7 +79,7 @@ const Login = () => {
         <div className="col-md-6 mt-5 p-5 ">
           <div className="mt-5 ms-5">
             <h1>{registro ? `Registrate` : `Iniciar Sesion`}</h1>
-            <form>
+            <form onSubmit={handlerSubmit}>
               <div className="mb-3">
                 <label className="form-label">Email Address: </label>
                 <input
@@ -66,6 +87,7 @@ const Login = () => {
                   className="form-control"
                   placeholder="Ingresar Email"
                   id="email"
+                  required
                 />
               </div>
               <div className="mb-3">
@@ -75,6 +97,7 @@ const Login = () => {
                   className="form-control"
                   placeholder="Ingresar password"
                   id="password"
+                  required
                 />
               </div>
               <button className="btn btn-primary" type="submit">

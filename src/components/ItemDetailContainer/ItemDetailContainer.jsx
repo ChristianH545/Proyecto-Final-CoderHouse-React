@@ -5,13 +5,28 @@ import styled from "styled-components";
 import NavBar from "../../layout/NavBar/NavBar";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../firebase/firebaseConfing";
+import Login from "../ Login/Login";
+import CartContainer from "../CartContainer/CartContainer";
+import { app } from "../firebase/firebaseConfing";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+const auth = getAuth(app);
 
 const ItemDetailContainer = () => {
   const { id, model } = useParams();
   console.log(id, model, "id del useParams");
 
   //!el manejo del estado de react
+  const [usuario, setUsuario] = useState(null);
   const [items, setItems] = useState([]);
+
+  onAuthStateChanged(auth, (usuarioFirebase) => {
+    if (usuarioFirebase) {
+      setUsuario(usuarioFirebase);
+    } else {
+      setUsuario(null);
+    }
+  });
 
   useEffect(() => {
     //!CREACION DE UNA VARIBLE PARA UTILIZAR EL "firebase"
@@ -38,7 +53,9 @@ const ItemDetailContainer = () => {
   console.table(items.id, "contenido del items");
   return (
     <>
+      {usuario ? <CartContainer correoUsuario={usuario.email} /> : <Login />}
       <NavBar />
+
       {/* este seria el padre contenedor para los style  */}
       <StyleItemDetailContainer>
         <div key={items.id}>
