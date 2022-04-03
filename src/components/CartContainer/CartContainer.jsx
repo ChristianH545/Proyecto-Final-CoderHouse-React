@@ -18,17 +18,17 @@ const CartContainer = ({ correoUsuario }) => {
   return (
     <>
       <NavBar />
-      <div className="container">
+      <div className="container col align-items-end ">
         <p>
           Bienvenido, <strong>{correoUsuario}</strong> haz iniciado sesión,{" "}
           <strong> ahora podras realizar la compra que desees.</strong> Gracias
           por Registrarte...
         </p>
-
-        <button className="btn btn-primary" onClick={() => signOut(auth)}>
-          Cerrar Sesión
-        </button>
-
+        <div className="d-md-flex justify-content-md-end mb-2 mt-1">
+          <button className="btn btn-primary " onClick={() => signOut(auth)}>
+            Cerrar Sesión
+          </button>
+        </div>
         <hr />
       </div>
       <StyleCartContainer>
