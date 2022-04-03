@@ -5,8 +5,12 @@ import styled from "styled-components";
 import NavBar from "../../layout/NavBar/NavBar";
 import CartView from "../Cart/CartView";
 import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
+import { app } from "../firebase/firebaseConfing";
+import { getAuth, signOut } from "firebase/auth";
 
-const CartContainer = () => {
+const auth = getAuth(app);
+
+const CartContainer = ({ correoUsuario }) => {
   // const { model } = useParams();
 
   const { itemCart } = useContext(CartContext);
@@ -14,6 +18,19 @@ const CartContainer = () => {
   return (
     <>
       <NavBar />
+      <div className="container">
+        <p>
+          Bienvenido, <strong>{correoUsuario}</strong> haz iniciado sesión,{" "}
+          <strong> ahora podras realizar la compra que desees.</strong> Gracias
+          por Registrarte...
+        </p>
+
+        <button className="btn btn-primary" onClick={() => signOut(auth)}>
+          Cerrar Sesión
+        </button>
+
+        <hr />
+      </div>
       <StyleCartContainer>
         <CartView product={product} />
       </StyleCartContainer>
