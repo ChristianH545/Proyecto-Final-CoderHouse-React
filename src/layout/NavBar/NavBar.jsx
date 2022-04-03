@@ -32,8 +32,8 @@ const NavBar = () => {
           <NavLink activeClassName="active" to="/Contact">
             Contact
           </NavLink>
-          <NavLink activeClassName="active" to="/Blog">
-            Blog
+          <NavLink activeClassName="active" to="/login">
+            Inicio de Sesión/Registro
           </NavLink>
         </div>
         <div className="burguer">
@@ -117,7 +117,7 @@ const StyleNav = styled.nav`
         position: absolute;
         width: 2rem;
         height: 2rem;
-        left: 60.5rem;
+        left: 46.5rem;
       }
 
       display: block;

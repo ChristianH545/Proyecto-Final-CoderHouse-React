@@ -78,7 +78,7 @@ const Login = () => {
         {/* en esta seccion sera nuestro formulario */}
         <div className="col-md-6 mt-5 p-5 ">
           <div className="mt-5 ms-5">
-            <h1>{registro ? `Registrate` : `Iniciar Sesion`}</h1>
+            <h1>{registro ? `Registrate` : `Iniciar Sesión`}</h1>
             <form onSubmit={handlerSubmit}>
               <div className="mb-3">
                 <label className="form-label">Email Address: </label>
@@ -101,7 +101,7 @@ const Login = () => {
                 />
               </div>
               <button className="btn btn-primary" type="submit">
-                {registro ? `Registrate` : `Inicia Sesion`}
+                {registro ? `Registrate` : `Inicia Sesión`}
               </button>
             </form>
 
@@ -111,7 +111,7 @@ const Login = () => {
                 onClick={() => setRegistro(!registro)}
               >
                 {registro
-                  ? `ya tienes una cuenta? Inicia Sesion`
+                  ? `ya tienes una cuenta? Inicia Sesión`
                   : `no tienes cuenta? Registrate`}
               </button>
             </div>

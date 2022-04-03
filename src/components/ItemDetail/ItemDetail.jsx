@@ -43,7 +43,7 @@ const ItemDetail = ({ item, totalItemCart }) => {
             {/* //*SERIA EL BOTON DE isInCart = TERMINAR COMPRA LE PASAREMOS UN link */}
 
             {isInCart ? (
-              <Link to={`/Cart/${item.model}`}>
+              <Link to={`/login/${item.model}`}>
                 <button className="button-terminar-compra" type="button">
                   Terminar Compra{" "}
                 </button>{" "}
