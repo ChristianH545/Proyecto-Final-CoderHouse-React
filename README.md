@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Bienvenidos al Proyecto Final De CoderHouse Tu @uto Importado
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
+Este proyecto fue iniciado con[Create React App](https://github.com/facebook/create-react-app).
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta la aplicación en el modo de desarrollo.\
+Abierto [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La página se volverá a cargar cuando realice cambios.\
+También puede ver errores de pelusa en la consola.
 
-### `npm test`
+## Descripción del Proyecto 
+Antes que nada es un ecommerce de autos para comercializar vía web. He trabajado varios elemento fundamentales vista en el curso de CoderHouse como:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**1. Nivelación & Instalación y configuración del entorno.**
 
-### `npm run build`
+**2. JSX y transpiling & Componentes.** I
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**3. Componentes II & Promises, asincronía y MAP.**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ **4. Consumiendo APIs & Routing y Navegación.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**5. Eventos & Context.**
 
-### `npm run eject`
+**6. Técnicas de rendering & Utilizando Firebase.**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**7. Firebase II & Workshop.**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Todas estas series de desafío llevaron a cabo dicho proyecto con funcionalidad, lógica integrando Grud y todo los elementos a tomar en cuenta en la creación de los componentes de react. sus funcionalidades, ciclos de vida, hooks, y el trabajo de function JS para la creación de un código optimizado y que brinde la lógica y interactividad  necesaria para realizar dicha app  
+## Inicia el Proyecto 
+Una vez iniciado verás que está compuesto de 4 pestañas o link de navegación. Solo está en funcionamiento el home, shop, user. Tenemos un login render condicional que debe iniciar al ejecutar la acción de **“finalizar compra”** y te mandara a registrarte con validación creada y enlazada  **“firebase 9”** una vez creado y logueado te va a redirigir al cart widget donde podrás apreciar toda tu compra.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+al llegar a home e shop podras seleccionar el vehiculo de tu gusto daras click al detalles y te va digerir a dicho enlace donde podrás  añadir la cantidad que deseas y realizará la lógica dicha suma de tus coches al igual que agregar al cart widget podrás volver si deseas seguir comprando **pero, no olvides loguearte antes** veremos otro render condicional para desplegar el botón **“finalizar compra”** al llegar ahí.
+ 
+ya en el login tendrás que colocar un **correo electrónico ficticio.** pero, no olvides que debe tener los argumentos pre establecidos para ello. dale **coherencia !**  la contraseña debe ser mayor a **9 dígitos** 
 
 ## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
