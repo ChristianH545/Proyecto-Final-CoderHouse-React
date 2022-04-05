@@ -12,7 +12,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 const db = getFirestore(app);
-const Bloq = () => {
+const User = () => {
   const valorInicial = {
     nombre: "",
     edad: "",
@@ -169,4 +169,4 @@ const Bloq = () => {
   );
 };
 
-export default Bloq;
+export default User;

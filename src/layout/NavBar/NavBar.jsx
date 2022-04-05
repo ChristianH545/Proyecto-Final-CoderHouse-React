@@ -32,8 +32,8 @@ const NavBar = () => {
           <NavLink activeClassName="active" to="/Contact">
             Contact
           </NavLink>
-          <NavLink activeClassName="active" to="/bloq">
-            Bloq
+          <NavLink activeClassName="active" to="/user">
+            User
           </NavLink>
         </div>
         <div className="burguer">
