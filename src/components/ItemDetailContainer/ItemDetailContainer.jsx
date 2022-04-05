@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import styled from "styled-components";
+import StyleItemDetailContainer from "./style";
 import NavBar from "../../layout/NavBar/NavBar";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../firebase/firebaseConfing";
@@ -52,8 +52,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-//*style de nuestro contenedor padre
-const StyleItemDetailContainer = styled.div`
-  font-weight: 400;
-  background-color: #efefef;
-`;

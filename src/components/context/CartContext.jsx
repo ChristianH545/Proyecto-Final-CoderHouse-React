@@ -1,7 +1,6 @@
 import { createContext } from "react";
 import { useState } from "react";
 
-//ESTA SERÁ NUESTRA FUNCION DE  "createContext()" ES = "CartContext"
 export const CartContext = createContext();
 
 export function CartContextProvider({ children }) {
@@ -18,18 +17,16 @@ export function CartContextProvider({ children }) {
   }
   //* FUNCION addItem
   function addItem(item, quantity) {
-    // Paso 2: En el caso exista el producto se recorre nuevamente el arreglo para identificar el index
     if (isInCart(item.id)) {
       let index = itemCart.findIndex((i) => i.id === item.id);
-      //Paso 3: Clonar carrito y ubicarse en el index encontrado para sumar cantidad
+
       let cloneCart = [...itemCart];
       cloneCart[index].qty += quantity;
-      //Paso 4: Actualizar total, carrito y cantidades totales
+
       setCartTotal(cartTotal + calc(item.price, quantity));
       setItemCart(cloneCart);
       setTotalItemCart(totalItemCart + quantity);
     } else {
-      // paso 5: en el caso no exista el producto se agregar 'qty' como nueva prop y se actualiza el estado del carrito, total y cantidades
       const newItemCart = { ...item, quantity: quantity };
       console.log("New item in Cart: ", newItemCart);
       setItemCart([...itemCart, newItemCart]);
