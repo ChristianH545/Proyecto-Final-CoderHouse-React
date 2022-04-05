@@ -8,7 +8,6 @@ const auth = getAuth(app);
 //hooks
 const LoginContainer = () => {
   const [usuario, setUsuario] = useState(null);
-  console.log(usuario);
 
   onAuthStateChanged(auth, (usuarioFirebase) => {
     if (usuarioFirebase) {

@@ -1,4 +1,4 @@
-import styled from "styled-components"; // importo la dependencia de mi package.Json "styled-components" para manejar los style
+import styled from "styled-components";
 
 //!Estilos para ProductCard
 

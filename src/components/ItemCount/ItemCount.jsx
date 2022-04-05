@@ -3,14 +3,11 @@ import { useState } from "react";
 export default function ItemCount({ stock, addToCart }) {
   const [count, setCount] = useState(1);
 
-  //*CREAMOS UNA FUNCIONPARA SUMAR
   function sumar() {
     if (count < stock) {
-      //SI EL CONTADOR ES MENOR QUE EL STOCK SUMAMOS
       setCount(count + 1);
     }
   }
-  //*CREAMOS UNA FUNCTION PARA RESTAR
   function restar() {
     if (count > 1) setCount(count - 1);
   }

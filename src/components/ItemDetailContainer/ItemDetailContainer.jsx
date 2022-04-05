@@ -10,12 +10,9 @@ const ItemDetailContainer = () => {
   const { id, model } = useParams();
   console.log(id, model, "id del useParams");
 
-  //!el manejo del estado de react
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    //!CREACION DE UNA VARIBLE PARA UTILIZAR EL "firebase"
     const getDetail = async () => {
       try {
         const listProducts = await getDocs(collection(db, "producto"));
@@ -40,8 +37,6 @@ const ItemDetailContainer = () => {
   return (
     <>
       <NavBar />
-
-      {/* este seria el padre contenedor para los style  */}
       <StyleItemDetailContainer>
         <div key={items.id}>
           <ItemDetail item={items} />

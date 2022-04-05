@@ -10,7 +10,6 @@ const ItemDetail = ({ item }) => {
 
   const [isInCart, setIsInCart] = useState(false);
 
-  //CREAMOS UNA FUNCTION QUE VA A RECIBIR  UNA CANTIDAD DE NUESTRO STOCK
   function addToCart(quantity) {
     addItem(item, quantity);
     setIsInCart(true);

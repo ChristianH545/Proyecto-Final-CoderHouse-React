@@ -17,13 +17,12 @@ const ItemListContainer = () => {
         });
         setProducts(docs);
       } catch (error) {
-        console.log(error, "error de firebase");
+        console.log(error);
       }
     };
 
     getProducts();
   }, []);
-  console.table(products);
   return (
     <StyleItemListContainer>
       {products.length ? (
