@@ -35,3 +35,4 @@ al llegar a home e shop podras seleccionar el vehiculo de tu gusto daras click a
 ya en el login tendrás que colocar un **correo electrónico ficticio.** pero, no olvides que debe tener los argumentos pre establecidos para ello. dale **coherencia !**  la contraseña debe ser mayor a **9 dígitos** 
 
 ## Learn More
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3b1ce258-0c09-42ff-80ed-43b5914abf8b/deploy-status)](https://app.netlify.com/sites/bucolic-tanuki-185882/deploys)
