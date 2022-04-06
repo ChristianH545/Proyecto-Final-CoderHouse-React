@@ -14,16 +14,26 @@ También puede ver errores de pelusa en la consola.
 Aquí podrás observar su funcionalidad  e integración de las tecnologías trabajadas **dale click** [![Netlify Status](https://api.netlify.com/api/v1/badges/3b1ce258-0c09-42ff-80ed-43b5914abf8b/deploy-status)](https://app.netlify.com/sites/proyectofinal-coderhouse-tuauto-importado/deploys) 
 
 ## Tecnologías Trabajadas
-### 'REACT 17.0.2'
-**REACT-DOM 17.0.2**
-**REACT-ICONS 4.3.1**
-**REACT-ROUTER-DOM 6.2.2**
-**REACT-SCRIPTS 5.0.0**
-**CSS 3**
-**HTML 5**
-**BOOTSTRAP   5.1.3**
-**STYLED-COMPONENTS 5.3.3**
-**TAILWIND-CSS 3.0.22**
+
+**1. REACT 17.0.2.**
+
+**2. REACT-DOM 17.0.2.**
+
+**3. REACT-ICONS 4.3.1.**
+
+**4. REACT-ROUTER-DOM 6.2.2.**
+
+**5.REACT-SCRIPTS 5.0.0.**
+
+**6.CSS 3.**
+
+**7.HTML 5.**
+
+**8.BOOTSTRAP   5.1.3.**
+
+**9.STYLED-COMPONENTS 5.3.3.**
+
+**10.TAILWIND-CSS 3.0.22.**
 
 
 ## Descripción del Proyecto 
