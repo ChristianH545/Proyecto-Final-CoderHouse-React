@@ -11,7 +11,7 @@ También puede ver errores de pelusa en la consola.
 
 ## Enlace del Proyecto
 
-Aquí podrás observar su funcionalidad  e integración de las tecnologías trabajadas **dale click** [![Netlify Status](https://api.netlify.com/api/v1/badges/3b1ce258-0c09-42ff-80ed-43b5914abf8b/deploy-status)](https://app.netlify.com/sites/proyectofinal-coderhouse-tuauto-importado/deploys) 
+Aquí podrás observar su funcionalidad  e integración de las tecnologías trabajadas **dale click** [![Netlify Status](https://proyectofinal-coderhouse-tuauto-importado.netlify.app/)]
 
 ## Tecnologías Trabajadas
 
