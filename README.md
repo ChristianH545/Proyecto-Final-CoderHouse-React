@@ -11,7 +11,7 @@ También puede ver errores de pelusa en la consola.
 
 ## Enlace del Proyecto
 
-Aquí podrás observar su funcionalidad  e integración de las tecnologías trabajadas **dale click** [(https://proyectofinal-coderhouse-tuauto-importado.netlify.app/)]
+Aquí podrás observar su funcionalidad  e integración de las tecnologías trabajadas **dale click** (https://proyectofinal-coderhouse-tuauto-importado.netlify.app/)
 
 ## Tecnologías Trabajadas
 
