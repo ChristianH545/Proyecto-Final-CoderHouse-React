@@ -1,10 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { useContext } from "react"; //!SE IMPORTA PARA UTILZAR EL useContex EN hooks
-import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
+import React, { useContext } from "react";
+import StyleCart from "../Cart/style";
+import CartContext from "../../context/CartContext";
 import CartWidget from "./CartWidget";
-//!este seria nuestro Components de Presentacion
 import { Link } from "react-router-dom";
+
 const CartView = () => {
   const { itemCart } = useContext(CartContext);
 
@@ -93,94 +92,3 @@ const CartView = () => {
   );
 };
 export default CartView;
-//*style de nuestro contenedor section
-const StyleCart = styled.section`
-  .cart {
-    display: flex;
-    align-items: center;
-
-    width: 1005px;
-    background-color: #ffffff;
-    padding: 30px 20px;
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: auto;
-
-    box-sizing: border-box;
-  }
-
-  .cart-img {
-    width: 48px;
-    height: auto;
-
-    margin-right: 35px;
-  }
-
-  .cart-text {
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  #cart-with-items {
-    display: ;
-  }
-
-  .cart-items,
-  .cart-price {
-    color: #1683d3;
-  }
-
-  .clear-cart {
-    margin-left: auto;
-    width: 200px;
-    height: 45px;
-    background-color: #1251d1;
-    margin-right: 20px;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    border: none;
-    cursor: pointer;
-  }
-  .button-terminar-compra {
-    margin-left: auto;
-    width: 200px;
-    height: 45px;
-    background-color: #1251d1;
-    margin-right: 20px;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    border: none;
-    cursor: pointer;
-  }
-  .ir-shop {
-    margin-left: auto;
-    width: 200px;
-    height: 45px;
-    background-color: #229954;
-    margin-right: 20px;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    border: none;
-    cursor: pointer;
-  }
-  .remove-cart {
-    margin-left: auto;
-    width: 150px;
-    height: 45px;
-    background-color: #e74c3c;
-    margin-right: 10px;
-    margin-left: -10px;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    border: none;
-    cursor: pointer;
-  }
-`;

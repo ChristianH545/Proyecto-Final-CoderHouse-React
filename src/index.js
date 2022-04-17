@@ -9,11 +9,12 @@ import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
 import User from "./pages/User";
 import Home from "./pages/Home";
-import Item from "../src/components/ItemDetailContainer/ItemDetailContainer";
-import Components404 from "./components/Components404/Components404";
+import Components404 from "./components/view/Components404/Components404";
 import { CartContextProvider } from "./components/context/CartContext";
-import CartContainer from "./components/CartContainer/CartContainer";
-import LoginContainer from "./components/ Login/LoginContainer/LoginContainer";
+import CartContainer from "./components/Container/CartContainer/CartContainer";
+import ItemDetailContainer from "./components/Container/ItemDetailContainer/ItemDetailContainer";
+import LoginContainer from "./components/Container/LoginContainer/LoginContainer";
+
 ReactDOM.render(
   <CartContextProvider>
     <BrowserRouter>
@@ -25,7 +26,11 @@ ReactDOM.render(
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/user" element={<User />} />
-        <Route exact path="/item/:id/:model" element={<Item />} />
+        <Route
+          exact
+          path="/item/:id/:model"
+          element={<ItemDetailContainer />}
+        />
         <Route exact path="/cart/:model" element={<CartContainer />} />
         <Route exact path="/login/:model" element={<LoginContainer />} />
 

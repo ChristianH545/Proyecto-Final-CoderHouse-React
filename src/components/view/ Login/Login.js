@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Uno from "../../assets/imagenes/img/img-auto1.jpg";
-import Dos from "../../assets/imagenes/img/img-auto2.jpg";
-import Tres from "../../assets/imagenes/img/img-auto3.jpg";
-import "../ Login/Login.css";
-//! para utilizar la validacion y autenticar de firebase 9
-import { app } from "../firebase/firebaseConfing";
+import Uno from "../../../assets/imagenes/img/img-auto1.jpg";
+import Dos from "../../../assets/imagenes/img/img-auto2.jpg";
+import Tres from "../../../assets/imagenes/img/img-auto3.jpg";
+import "../../view/ Login/Login.css";
+import { app } from "../../firebase/firebaseConfing";
 import {
   getAuth,
   createUserWithEmailAndPassword,

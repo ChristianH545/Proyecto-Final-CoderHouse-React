@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react"; //!SE IMPORTA PARA UTILZAR EL useContex EN hooks
-import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
+import CartContext from "../../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
 import { Link } from "react-router-dom";
 
 const CartWidget = () => {

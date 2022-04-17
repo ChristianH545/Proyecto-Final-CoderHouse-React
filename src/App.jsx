@@ -1,6 +1,6 @@
 import NavBar from "./layout/NavBar/NavBar";
-import HeroContainer from "./components/HeroContainer/HeroContainer";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import HeroContainer from "./components/Container/HeroContainer/HeroContainer";
+import ItemListContainer from "./components/Container/ItemListContainer/ItemListContainer";
 import "./App.css";
 import { Outlet } from "react-router-dom";
 

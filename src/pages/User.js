@@ -91,7 +91,7 @@ const User = () => {
       <NavBar />
       <p>
         {" "}
-        <strong>Bloq</strong>{" "}
+        <strong>User</strong>{" "}
       </p>
       ;{/* comezando el formulario */}
       <div className="container">

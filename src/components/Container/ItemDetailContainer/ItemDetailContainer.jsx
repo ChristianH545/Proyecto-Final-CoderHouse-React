@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+import ItemDetail from "../../view/ItemDetail/ItemDetail";
 import StyleItemDetailContainer from "./style";
-import NavBar from "../../layout/NavBar/NavBar";
+import NavBar from "../../../layout/NavBar/NavBar";
 import { collection, getDocs } from "firebase/firestore";
-import db from "../firebase/firebaseConfing";
+import db from "../../firebase/firebaseConfing";
 
 const ItemDetailContainer = () => {
   const { id, model } = useParams();

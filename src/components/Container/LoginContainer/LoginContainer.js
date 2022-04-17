@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Login from "../Login";
-import CartContainer from "../../CartContainer/CartContainer";
+import Login from "../../view/ Login/Login";
+import CartContainer from "../CartContainer/CartContainer";
 import { app } from "../../firebase/firebaseConfing";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 

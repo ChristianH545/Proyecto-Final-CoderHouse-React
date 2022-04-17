@@ -1,44 +1,4 @@
-import React from "react";
-// import { useParams } from "react-router-dom";
-import { useContext } from "react";
 import styled from "styled-components";
-import NavBar from "../../layout/NavBar/NavBar";
-import CartView from "../Cart/CartView";
-import CartContext from "../context/CartContext"; //!SE ENLAZA NUESTRA CARPETA DONDE ESTA LA FUNCTION DEL useContext
-import { app } from "../firebase/firebaseConfing";
-import { getAuth, signOut } from "firebase/auth";
-
-const auth = getAuth(app);
-
-const CartContainer = ({ correoUsuario }) => {
-  // const { model } = useParams();
-
-  const { itemCart } = useContext(CartContext);
-  const product = itemCart;
-  return (
-    <>
-      <NavBar />
-      <div className="container col align-items-end ">
-        <p>
-          Bienvenido, <strong>{correoUsuario}</strong> haz iniciado sesión,{" "}
-          <strong> ahora podras realizar la compra que desees.</strong> Gracias
-          por Registrarte...
-        </p>
-        <div className="d-md-flex justify-content-md-end mb-2 mt-1">
-          <button className="btn btn-primary " onClick={() => signOut(auth)}>
-            Cerrar Sesión
-          </button>
-        </div>
-        <hr />
-      </div>
-      <StyleCartContainer>
-        <CartView product={product} />
-      </StyleCartContainer>
-    </>
-  );
-};
-
-export default CartContainer;
 
 //*style de nuestro contenedor padre
 const StyleCartContainer = styled.main`
@@ -175,3 +135,4 @@ const StyleCartContainer = styled.main`
     }
   }
 `;
+export default StyleCartContainer;
